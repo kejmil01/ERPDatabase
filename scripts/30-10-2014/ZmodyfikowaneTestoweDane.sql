@@ -2,7 +2,9 @@ use ERPDatabase
 INSERT INTO Typ_Umowy(nazwa) VALUES
 ('Zlecenie'),
 ('O dzie³o'),
-('O prace');
+('Na czas okreœlony'),
+('Na czas nieokreœlony'),
+('Okres próbny');
 
 INSERT INTO Typ_Stanowiska(nazwa) VALUES
 ('Software Engineer'),
@@ -12,7 +14,8 @@ INSERT INTO Typ_Stanowiska(nazwa) VALUES
 
 INSERT INTO Typ_Urlopu(nazwa) VALUES
 ('Wypoczynkowy'),
-('Chorobowy');
+('Chorobowy'),
+('Macierzyñski');
 
 INSERT INTO Zasoby(nazwa) VALUES
 ('Notebook HP EliteBook 840'),
@@ -33,7 +36,11 @@ INSERT INTO Projekty(nazwa, opis, data_rozpoczecia,data_zakonczenia) VALUES
 ('System - zarzadzanie restauracja','W restauracji da', '2014-09-24 11:53:32','2014-12-30 14:32:43'),
 ('System - zarzadzanie zasobami','super zasoby', '2013-12-05 08:43:38', NULL);
 
-INSERT INTO Grupy(nazwa) VALUES ('Pracownicy');
+INSERT INTO Grupy(nazwa) VALUES
+('Programiœci'),
+('Graficy'),
+('SEO'),
+('IT');
 
 INSERT INTO Pracownicy(imie, nazwisko, telefon, adres) VALUES
 ('Jakub', 'Nowak', '515246046', '60-965 Poznañ, ul. Ch³apowskiego 17/18'),
@@ -55,3 +62,7 @@ INSERT INTO Pracownicy(imie, nazwisko, telefon, adres) VALUES
 ('Igor', 'Nowacki', '227135990', '61-055 Poznañ, ul. Warszawska 181/185'),
 ('Marcel', 'Nowacki', '224261906', '60-823 Poznañ, ul. S³owackiego 19'),
 ('Dawid', 'Borowski', '616220891', '61-558 Poznañ, ul. Wierzbiêcice 45');
+
+INSERT INTO Uzytkownicy(user_login,user_password,super_user,id_pracownicy) VALUES
+('admin','1a1dc91c907325c69271ddf0c944bc72',1,15);
+
