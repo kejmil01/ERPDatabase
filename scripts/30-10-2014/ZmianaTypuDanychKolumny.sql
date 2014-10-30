@@ -1,0 +1,3 @@
+use ERPDatabase
+ALTER TABLE Projekty
+ALTER COLUMN opis TEXT
