@@ -1,0 +1,4 @@
+USE ERPDatabase;
+
+ALTER TABLE Wyplaty
+DROP CONSTRAINT FK__Wyplaty__id_umow__5EBF139D;
